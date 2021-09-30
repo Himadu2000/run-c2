@@ -40,7 +40,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
-      - name: Install Dependencies
+      - name: Run
         run: node main.js
         env: # Or as an environment variable
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
